@@ -14,6 +14,11 @@ if (UNIX)
     )
 endif()
 
+if (WIN32 AND NUKE_VERSION_MAJOR VERSION_GREATER_EQUAL 14.0)
+    add_definitions(-DNOMINMAX)
+    add_definitions(-D_USE_MATH_DEFINES)
+endif()
+
 find_package(OpenGL)
 if (NOT OpenGL_FOUND)
     message(WARNING "Couldn't find OpenGL dev libraries, skipping DeepCPMatte Plugin")   
