@@ -50,6 +50,14 @@ release
 
 # build
 build
+.build
+DeepC.cmake.config
+DeepC.cmake.outputs
 
 # install
 install
+release
+
+# scons
+.sconsign.dblite
+excons.cache
